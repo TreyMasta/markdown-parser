@@ -4,5 +4,5 @@
 [link2](cs-test.html)
 [](WrongLink)
 
-**stuff**
+**\[stuff\]\(hhhh\)**
 
