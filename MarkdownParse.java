@@ -53,7 +53,9 @@ public class MarkdownParse {
         // find the next [, then find the ], then find the (, then take up to
         // the next )
         int currentIndex = 0;
+        //System.out.println(markdown.length());
         while(currentIndex < markdown.length()) {
+            System.out.println(currentIndex);
             int nextOpenBracket = markdown.indexOf("[", currentIndex);
             int nextCodeBlock = markdown.indexOf("\n```");
             if(nextCodeBlock < nextOpenBracket && nextCodeBlock != -1) {
@@ -79,6 +81,7 @@ public class MarkdownParse {
             else {
                 currentIndex = currentIndex + 1;
             }
+            
         }
         return toReturn;
     }
@@ -89,3 +92,5 @@ public class MarkdownParse {
         System.out.println(links);
     }
 }
+
+
