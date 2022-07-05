@@ -53,7 +53,6 @@ public class MarkdownParse {
         // find the next [, then find the ], then find the (, then take up to
         // the next )
         int currentIndex = 0;
-        //System.out.println(markdown.length());
         while(currentIndex < markdown.length()) {
             System.out.println(currentIndex);
             int nextOpenBracket = markdown.indexOf("[", currentIndex);
@@ -63,6 +62,17 @@ public class MarkdownParse {
                 currentIndex = endOfCodeBlock + 1;
                 continue;
             }
+
+            int nextAsterisk = markdown.indexOf("**");
+            if(nextAsterisk < nextOpenBracket && nextAsterisk != -1) {
+                System.out.println(nextAsterisk);
+                int endAsterisk = markdown.indexOf("**", nextAsterisk + 1);
+                System.out.println(endAsterisk);
+                currentIndex = endAsterisk + 1;
+                continue;
+            }
+
+
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
 
