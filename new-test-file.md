@@ -2,7 +2,7 @@
 
 [link1](https://cstest.com)
 [link2](cs-test.html)
-'[Testlink](WrongLink)'
+[Testlink](WrongLink)
 
 **\[stuff\]\(hhhh\)**
 
